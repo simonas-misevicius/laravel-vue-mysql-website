@@ -34,3 +34,6 @@ require __DIR__.'/auth.php';
 Route::get('/myDisplay', function () {
     return Inertia::render('firstDisplay');
 });
+
+use App\Http\Controllers\RecipesController;
+Route::get('/mySecond', [RecipesController::class, 'getSecond']);
